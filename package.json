@@ -35,7 +35,13 @@
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
+			"@tailwindcss/oxide",
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^1.0.1",
+		"@stackframe/js": "^2.8.25",
+		"dotenv": "^17.2.1"
 	}
 }

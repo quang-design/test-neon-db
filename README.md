@@ -1,38 +1,43 @@
-# sv
+# Neon DB + Auth Test
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Minimal SvelteKit setup testing Neon database connection and authentication.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Quick Start
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+pnpm install
+pnpm dev
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Environment
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# .env
+DATABASE_URL="postgresql://user:pass@host:port/db"
 ```
 
-## Building
+## Features Tested
 
-To create a production version of your app:
+- Database connection (Neon)
+- Basic query execution
+- Auth integration (Neon Auth)
+- SSR data fetching
+- Server-side database access
 
-```bash
-npm run build
-```
+## Tech Stack
 
-You can preview the production build with `npm run preview`.
+- **Framework**: SvelteKit + Svelte 5
+- **Database**: Neon PostgreSQL
+- **Auth**: Neon Auth
+- **Styling**: Tailwind CSS v4
+- **Package Manager**: pnpm
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Files
+
+- `src/lib/database/db.server.ts` - Database configuration
+- `src/routes/+page.server.ts` - Server-side data fetching
+- `src/routes/+page.svelte` - Frontend display
+
+## Test
+
+Visit `http://localhost:5173` to see database connection status and auth test.
